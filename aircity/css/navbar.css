@@ -1,24 +1,33 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 nav {
   padding: 10px;
   display: flex;
-  margin-left: 400px; /*have to remove if we set the logo  */
+  justify-content: space-between;
+  align-items: center;
+  min-width: screen;
+  height: 50px;
 }
 
+.name-section p {
+  font-size: 28px;
+}
 .navbar {
   display: flex;
-  justify-content: center;
-  width: 1440px;
-  height: 88px;
-  margin: 0 auto;
+  justify-content: start;
+  margin: 0 40px;
 }
 
-.home-section,
+.help-section,
 .search-section {
   width: 246px;
   height: 40px;
   box-sizing: border-box;
 }
-.home-section {
+.help-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +37,7 @@ nav {
   border-radius: 20px;
 }
 
-.home-section p {
+.help-section p {
   width: 195px;
   height: 22px;
   font-size: 18px;
@@ -54,10 +63,13 @@ nav {
 input[type="text"]::placeholder {
   color: gray;
   font-weight: 600;
-  padding-left: 26px;
+  padding-left: 12px;
 }
 .search-section i {
   margin-left: 5px;
+}
+.fa-search {
+  margin-right: 10px;
 }
 
 .wallet-section {
@@ -85,6 +97,7 @@ i {
   display: flex;
   align-items: center;
   padding-left: 50px;
+  cursor: pointer;
 }
 .fa-arrow-right-from-bracket {
   margin-top: 8px;
@@ -93,4 +106,32 @@ i {
   height: 100%;
   font-size: 32px;
   font-weight: 300;
+}
+
+/* mini Navbar  */
+
+.mini-banner {
+  background-color: #001f3f;
+  text-align: center;
+  overflow: hidden;
+  min-width: screen;
+}
+
+.mini-banner p {
+  color: white;
+}
+
+.rtl-text {
+  animation: scrollText 25s linear infinite;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
