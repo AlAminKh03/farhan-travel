@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 body {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 nav {
   padding: 10px;
@@ -62,7 +65,7 @@ nav {
 }
 input[type="text"]::placeholder {
   color: gray;
-  font-weight: 600;
+  font-weight: 400;
   padding-left: 12px;
 }
 .search-section i {
@@ -105,7 +108,6 @@ i {
   width: 100%;
   height: 100%;
   font-size: 32px;
-  font-weight: 300;
 }
 
 /* mini Navbar  */
@@ -134,4 +136,212 @@ i {
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* sidebar  */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 61px;
+  height: 100vh; /* 100% of the viewport height */
+  background-color: #004a99;
+}
+
+.section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: color 4s ease;
+}
+.section:first-child {
+  margin-top: 70px;
+}
+.section i {
+  color: white;
+  cursor: pointer;
+}
+.section i:hover {
+  color: #d3d3d3;
+}
+.sticky-p {
+  position: fixed;
+  background-color: #f3f3f3;
+  padding: 8px;
+  border: 1px solid #004a99;
+  border-radius: 50%;
+  top: 110px;
+  left: 45px;
+  z-index: 10;
+}
+.fa-right-left {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* main-section */
+
+.main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1164px;
+  height: 364px;
+  background-color: #f2f2f2;
+  margin: 30px 0px 0px 110px;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.flight-content {
+  position: relative;
+  width: 1056px;
+  height: 178px;
+  background-color: #004a97;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 20;
+}
+.flight-radio {
+  padding: 18px;
+}
+.flight-radio label {
+  color: white;
+}
+
+.flight-radio input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  outline: none;
+  background-color: #fff;
+  vertical-align: middle;
+  position: relative;
+}
+.flight-radio input[type="radio"]:checked {
+  background-color: #ff8d0a;
+}
+
+/* input field  */
+
+.booking-content {
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* .input-container input[type="text"] {
+  padding-left: 30px;
+} */
+
+.input-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/* .input-container .label {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  color: #888;
+} */
+.input-container label {
+  color: white;
+  font-size: small;
+}
+
+.input-container .fa-solid,
+.fa-regular {
+  position: absolute;
+  right: 10px;
+  bottom: 20%;
+  color: #888;
+}
+.input-container:nth-child(-n + 2) input {
+  min-width: 210px;
+  min-height: 50px;
+}
+
+/* Select last 3 input elements */
+.input-container:nth-last-child(-n + 3) input {
+  min-width: 180px;
+  min-height: 50px;
+}
+
+/* Booking options  */
+
+.booking-options {
+  display: flex;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: -1;
+}
+
+.booking-option {
+  padding: 0px 20px;
+  margin-right: 5px;
+  background-color: #056edb;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.booking-option:hover {
+  background-color: #004a97;
+}
+.booking-option:first-child {
+  border-top-left-radius: 10px;
+}
+.booking-option p:active {
+  border-bottom: 2px solid #ff8d0a;
+}
+.booking-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-button {
+  position: absolute;
+  bottom: 23%;
+  z-index: 30;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.822),
+    0 -2px 4px rgba(255, 255, 255, 0.863);
+  border-radius: 5px;
+}
+.search-button button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: #f77713;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
 }
